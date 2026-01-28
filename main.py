@@ -1,5 +1,7 @@
 import requests
 import pandas as pd
+from datetime import date
+
 
 # Simulação da chave e URL
 chave = "SUA_CHAVE" # Apenas caso a api solicite uma chave
@@ -27,6 +29,16 @@ for par_moeda, dados in resposta.items():
 
 # 3. Criamos o DataFrame de uma vez só, fora do loop
 df = pd.DataFrame(dados_para_dataframe)
-df.to_csv('df.csv', index=False)
+
+# Obtém a data atual
+hoje = date.today()
+print(hoje) # Formato: YYYY-MM-DD
+
+# Formata a data (DD/MM/AAAA)
+data_formatada = hoje.strftime('%d-%m-%Y')
+print(data_formatada)
+
+df.to_csv(f'df_{data_formatada}.csv', index=False)
+
 print("\n--- Dados recolhidos   --")
 print(df)
