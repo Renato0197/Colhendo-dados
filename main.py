@@ -1,9 +1,8 @@
 import requests
 import pandas as pd
-# from util import chave_api # Removido comentário para teste
 
 # Simulação da chave e URL
-chave = "SUA_CHAVE"
+chave = "SUA_CHAVE" # Apenas caso a api solicite uma chave
 url = f'https://economia.awesomeapi.com.br/json/last/USD-BRL,BTC-BRL,EUR-BRL,GBP-BRL'
 resposta = requests.get(url).json()
 print(resposta)
@@ -28,6 +27,6 @@ for par_moeda, dados in resposta.items():
 
 # 3. Criamos o DataFrame de uma vez só, fora do loop
 df = pd.DataFrame(dados_para_dataframe)
-
+df.to_csv('df.csv', index=False)
 print("\n--- Dados recolhidos   --")
 print(df)
