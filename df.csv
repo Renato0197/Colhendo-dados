@@ -1,0 +1,5 @@
+par_moeda,moeda,moeda_destino,nome,preco_compra,preco_venda,max_dia,min_dia,variacao,variacao_pct,timestamp,data_coleta
+USDBRL,USD,BRL,Dólar Americano/Real Brasileiro,5.2176,5.2206,5.2202,5.16217,0.03682,0.710705,1769627417,2026-01-28 16:10:17
+BTCBRL,BTC,BRL,Bitcoin/Real Brasileiro,465760.0,465829.0,471041.0,458118.0,7090.0,1.546,1769627420,2026-01-28 16:10:20
+EURBRL,EUR,BRL,Euro/Real Brasileiro,6.2116,6.2196,6.2422,6.1795,-0.01505,-0.241707,1769627385,2026-01-28 16:09:45
+GBPBRL,GBP,BRL,Libra Esterlina/Real Brasileiro,7.18089,7.18502,7.19169,7.11744,0.012652,0.1765,1769627417,2026-01-28 16:10:17
